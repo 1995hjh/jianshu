@@ -1,17 +1,19 @@
 import React, {
-  Component
+  Component,
+  Fragment
 } from 'react';
 import {
   GloabelStyle
 } from './style.js';
+import Header from './common/header';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
           <GloabelStyle/>
-          HELLO WORLD
-      </div>
+          <Header/>
+      </Fragment>
     );
   }
 }

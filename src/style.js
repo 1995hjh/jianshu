@@ -46,4 +46,7 @@ export const GloabelStyle = createGlobalStyle `
 		border-collapse: collapse;
 		border-spacing: 0;
 	}
+	* {
+		outline: 0
+	}
 `
