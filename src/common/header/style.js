@@ -31,6 +31,19 @@ export const Nav = styled.div `
 	width: 60%;
 	height: 100%;
 	margin: 0 auto;
+	position: relative;
+	.iconSearch {
+		position: absolute;
+	    top: 14px;
+	    left: 53%;
+	    font-size: 20px;
+	    width: 30px;
+	    height: 30px;
+	    line-height: 30px;
+	    border-radius: 15px;
+	    text-align: center;
+	    cursor: pointer;
+	}
 `
 
 export const NavItem = styled.div `
@@ -39,20 +52,30 @@ export const NavItem = styled.div `
 	text-align: center;
 	font-size: 17px;
 	cursor: pointer;
+	overflow: hidden;
+    white-space: nowrap;
 	&.left {
 		float: left;
 		margin-right: 10px;
 	}
 	&.right {
 		float: right;
-		margin-left: 10px;
 		color: #969696;
+	}
+	&.login {
+		width: 10%;
+	}
+	&.aaView {
+		width: 5%;
 	}
 	&.active {
 		color: #ea6f51;
 	}
 	&.black {
 		color: #333;
+	}
+	.iconAa {
+		font-size: 20px
 	}
 `
 
