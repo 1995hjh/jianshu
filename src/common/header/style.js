@@ -44,6 +44,17 @@ export const Nav = styled.div `
 	    text-align: center;
 	    cursor: pointer;
 	}
+	.focused {
+		background: #777;
+		color: #fff;
+		left: 63%;
+    }
+    .ifocused-enter {
+		transition: all .5s ease-out;
+    }
+    .ifocused-exit {
+    	transition: all .5s ease-in;
+    }
 `
 
 export const NavItem = styled.div `
@@ -81,19 +92,32 @@ export const NavItem = styled.div `
 
 export const NavSearch = styled.input.attrs({
 	placeholder: '搜索'
-})`	
-	width: 20%;
-	height: 38px;
+})`
+    height: 38px;
     margin: 9px 0;
     background: #eee;
     border: 1px solid #eee;
     border-radius: 19px;
-    padding: 0 20px;
+    padding: 0 35px 0 20px;
+    box-sizing: border-box;
+    color: #666;
+    width: 25%;
     &::placeholder {
     	color: #999
     }
+    &.focused {
+		width: 35%;
+		background: #eee;
+		color: #666;
+		padding: 0 45px 0 20px;
+    }
+    &.focused-enter {
+		transition: all .5s ease-out;
+    }
+    &.focused-exit {
+    	transition: all .5s ease-in;
+    }
 `
-
 export const NavBtnView = styled.div `
 	position: absolute;
 	top: 0;
