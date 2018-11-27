@@ -68,4 +68,8 @@ export const GloabelStyle = createGlobalStyle `
 	i {
 		margin-right: 5px;
 	}
+
+	.clear {
+		clear: both;
+	}
 `

@@ -35,7 +35,7 @@ export const Nav = styled.div `
 	.iconSearch {
 		position: absolute;
 	    top: 14px;
-	    left: 53%;
+	    left: 56%;
 	    font-size: 20px;
 	    width: 30px;
 	    height: 30px;
@@ -85,6 +85,9 @@ export const NavItem = styled.div `
 	&.black {
 		color: #333;
 	}
+	&.black:hover {
+		background: #eee;
+	}
 	.iconAa {
 		font-size: 20px
 	}
@@ -101,7 +104,7 @@ export const NavSearch = styled.input.attrs({
     padding: 0 35px 0 20px;
     box-sizing: border-box;
     color: #666;
-    width: 25%;
+    width: 28%;
     &::placeholder {
     	color: #999
     }
@@ -118,6 +121,57 @@ export const NavSearch = styled.input.attrs({
     	transition: all .5s ease-in;
     }
 `
+/*
+	&::before {
+		content: '';
+		width: 10px;
+		height: 10px;
+		transform: rotate(45deg);
+	}
+*/
+export const SearchInfo = styled.div `
+	position: absolute;
+    left: 32%;
+    top: 58px;
+    width: 25%;
+    padding: 20px 20px 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    background: #fff;
+    border-radius: 4px;
+    clear: both;
+`
+export const SearchInfoTitle = styled.div`
+	color: #969696;
+	font-size: 14px;
+	margin-bottom: 5px;
+	&.left {
+		float: left;
+	}
+	&.right {
+		float: right;
+		font-size: 13px;
+		cursor: pointer;
+	}
+	&.right:hover {
+		color: #333;
+	}
+`
+export const SearchInfoItem = styled.div`
+	float: left;
+	margin-right: 10px;
+    margin-top: 12px;
+    padding: 2px 6px;
+    font-size: 12px;
+    color: #787878;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+    	color: #333;
+    	border: 1px solid #b4b4b4;
+    }
+`
+
 export const NavBtnView = styled.div `
 	position: absolute;
 	top: 0;
