@@ -30,3 +30,9 @@
 
 	引入combineReducers的时候，由之前的import { combineReducers } from 'redux'; 改为import { combineReducers } from 'redux-immutable';
 
+## 中间件
+	redux-thunk
+
+## 数据请求
+	axios
+
