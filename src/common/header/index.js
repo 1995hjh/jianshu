@@ -59,7 +59,7 @@ const Header = (props) => {
 
 const matStateToProps = (state) => {
 	return {
-		focused: state.header.focused
+		focused: state.header.get('focused')
 	}
 }
 
