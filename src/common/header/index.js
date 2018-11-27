@@ -13,6 +13,7 @@ import {
 	NavBtnView,
 	NavBtn
 } from './style';
+import { actions } from './store';
 
 const Header = (props) => {
 	const {
@@ -65,16 +66,10 @@ const matStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		handleInputFocus () {
-			const action = {
-				type: 'search_focus'
-			}
-			dispatch(action);
+			dispatch(actions.searchFocus());
 		},
 		handleInputBlur () {
-			const action = {
-				type: 'search_blur'
-			}
-			dispatch(action);
+			dispatch(actions.searchBlur());
 		}
 	}
 }
