@@ -139,6 +139,13 @@ export const SearchInfo = styled.div `
     background: #fff;
     border-radius: 4px;
     clear: both;
+    .iconChange{
+    	font-size: 13px;
+    	transition: all .2s ease-in;
+    	transform-origin: center center;
+    	display: block;
+    	float: left;
+    }
 `
 export const SearchInfoTitle = styled.div`
 	color: #969696;
