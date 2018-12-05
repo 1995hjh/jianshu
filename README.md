@@ -38,3 +38,10 @@
 
 ## 路由
 	react-router-dom
+
+## 图标
+	1. Iconfont-阿里巴巴矢量图标库选择图标，加入项目，下载
+	2. 复制.eot, .woff, .svg, .ttf到项目文件中
+	3. 全局样式设置
+		拷贝iconfont.css的@font-face和.iconfont的样式到全局样式中，注意这里修改@font-face的里面文件的路径
+	4.以demo_unicode.html的示例方式引入字体图标即可

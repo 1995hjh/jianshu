@@ -121,14 +121,6 @@ export const NavSearch = styled.input.attrs({
     	transition: all .5s ease-in;
     }
 `
-/*
-	&::before {
-		content: '';
-		width: 10px;
-		height: 10px;
-		transform: rotate(45deg);
-	}
-*/
 export const SearchInfo = styled.div `
 	position: absolute;
     left: 32%;
@@ -139,6 +131,7 @@ export const SearchInfo = styled.div `
     background: #fff;
     border-radius: 4px;
     clear: both;
+    z-index: 1;
     .iconChange{
     	font-size: 13px;
     	transition: all .2s ease-in;

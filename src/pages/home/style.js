@@ -56,3 +56,62 @@ export const TopicItem = styled.div `
 		margin-top: -1px;
 	}
 `
+
+export const ListItem = styled.div `
+	overflow: hidden;
+	border-top: 1px solid #f0f0f0;
+	clear: both;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 15px;
+	img {
+		float: right;
+		width: 25%;
+		height: 100px;
+		border-radius: 4px;
+	}
+`
+
+export const ListContent = styled.div `
+    font-size: 13px;
+    line-height: 24px;
+    color: #999;
+    float: left;
+    margin-right: 5%;
+    width: 70%;
+    height: 100%;
+    .title {
+	    font-size: 18px;
+	    font-weight: 700;
+	    color: #333;
+	    max-height: 50px;
+	    overflow: hidden;
+	    display: block;
+	    width: 100%;
+	    display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+    }
+    .content {
+    	max-height: 75px;
+	    display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+    }
+    a {
+    	color: #999;
+    	text-decoration: none;
+    	margin-right: 12px;
+    }
+    .iconP {
+		font-size: 12px;
+		vertical-align: middle;
+		margin-right: 1px;
+    }
+    .iconZan {
+    	font-size: 14px;
+    	vertical-align: top;
+    	margin-right: 1px;
+    }
+`
