@@ -46,6 +46,61 @@ const defaultState = fromJS({
 		commonetNum: 23,
 		zanNum: 123,
 		imgUrl: require('../../../static/list1.jpg')
+	}],
+	recommandList: [{
+		id: 1,
+		imgUrl: require('../../../static/guide1.png')
+	},
+	{
+		id: 2,
+		imgUrl: require('../../../static/guide2.png')
+	},
+	{
+		id: 3,
+		imgUrl: require('../../../static/guide3.png')
+	},
+	{
+		id: 4,
+		imgUrl: require('../../../static/guide4.png')
+	},
+	{
+		id: 5,
+		imgUrl: require('../../../static/guide5.png')
+	}],
+	writerList: [{
+		id: 1,
+		imgUrl: require('../../../static/writer1.webp'),
+		name: '格列柯南',
+		wordNum: '665.3k',
+		loveNum: '15.4k'
+	},
+	{
+		id: 2,
+		imgUrl: require('../../../static/writer2.webp'),
+		name: '木青琳',
+		wordNum: '265.7k',
+		loveNum: '5k'
+	},
+	{
+		id: 3,
+		imgUrl: require('../../../static/writer3.webp'),
+		name: '琪官KAfka',
+		wordNum: '372.9k',
+		loveNum: '3.7k'
+	},
+	{
+		id: 4,
+		imgUrl: require('../../../static/writer4.webp'),
+		name: '念远怀人',
+		wordNum: '665.3k',
+		loveNum: '7.2k'
+	},
+	{
+		id: 5,
+		imgUrl: require('../../../static/writer5.webp'),
+		name: '须僧',
+		wordNum: '321.3k',
+		loveNum: '7k'
 	}]
 });
 

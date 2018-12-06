@@ -63,7 +63,7 @@ class Header extends Component {
 			return null;
 		}
 	}
-	
+
 	render() {
 
 		const {
@@ -83,7 +83,7 @@ class Header extends Component {
 							<NavItem className='left black'><i className="icon iconfont">&#xe64f;</i>下载App</NavItem>
 							<NavItem className='right login'>登录</NavItem>
 							<NavItem className='right aaView'><i className="icon iconfont iconAa">&#xe636;</i></NavItem>
-							<CSSTransition 
+							<CSSTransition
 								in={focused}
 								timeout={500}
 								classNames='focused'>
@@ -92,7 +92,7 @@ class Header extends Component {
 									onFocus={() => {handleInputFocus(list)}}
 									onBlur={handleInputBlur}></NavSearch>
 							</CSSTransition>
-							<CSSTransition 
+							<CSSTransition
 								in={focused}
 								timeout={500}
 								classNames='ifocused'>

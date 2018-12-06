@@ -14,11 +14,11 @@ class List extends Component {
 						return (
 							<ListItem key={item.get('id')}>
 								<ListContent>
-									<a className='title'>{item.get('title')}</a>
+									<a href='/' className='title'>{item.get('title')}</a>
 									<p className='content'>{item.get('content')}</p>
 									<div>
-										<a href="">{item.get('name')}</a>
-										<a href="">
+										<a href="/">{item.get('name')}</a>
+										<a href="/">
 											<i className="icon iconfont iconP">&#xe60c;</i>
 											{item.get('commonetNum')}
 										</a>
@@ -28,7 +28,7 @@ class List extends Component {
 										</span>
 									</div>
 								</ListContent>
-								<img src={item.get('imgUrl')} alt={item.get('name')}/>
+								<a href='/'><img src={item.get('imgUrl')} alt={item.get('name')}/></a>
 							</ListItem>
 						)
 					})

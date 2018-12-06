@@ -19,7 +19,7 @@ export const Logo = styled.a.attrs({
 })`
 	position: absolute;
 	top: 0;
-	left: 5%;
+	left: 0%;
 	width: 100px;
 	height: 56px;
 	display: block;
@@ -28,7 +28,7 @@ export const Logo = styled.a.attrs({
 `
 
 export const Nav = styled.div `
-	width: 60%;
+	width: 70%;
 	height: 100%;
 	margin: 0 auto;
 	position: relative;
@@ -60,7 +60,7 @@ export const Nav = styled.div `
 export const NavItem = styled.div `
 	line-height: 57px;
 	width: 15%;
-	text-align: center;
+	text-align: left;
 	font-size: 17px;
 	cursor: pointer;
 	overflow: hidden;
@@ -175,7 +175,7 @@ export const SearchInfoItem = styled.div`
 export const NavBtnView = styled.div `
 	position: absolute;
 	top: 0;
-	right: 5%;
+	right: 0%;
 	height: 56px;
 	display: block;
 	width: 15%;
