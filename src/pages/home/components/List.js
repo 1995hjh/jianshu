@@ -1,9 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { ListItem, ListContent, ReadMoreBtn } from '../style';
 import { actions } from '../store';
 
-class List extends Component {
+class List extends PureComponent {
 	render() {
 		const {
 			list,
@@ -17,21 +18,21 @@ class List extends Component {
 						return (
 							<ListItem key={index}>
 								<ListContent>
-									<a href='/' className='title'>{item.get('title')}</a>
+									<Link to='/detail' className='title'>{item.get('title')}</Link>
 									<p className='content'>{item.get('content')}</p>
 									<div>
-										<a href="/">{item.get('name')}</a>
-										<a href="/">
+										<Link to="/detail">{item.get('name')}</Link>
+										<Link to="/detail">
 											<i className="icon iconfont iconP">&#xe60c;</i>
 											{item.get('commonetNum')}
-										</a>
+										</Link>
 										<span>
 											<i className="icon iconfont iconZan">&#xe622;</i>
 											{item.get('zanNum')}
 										</span>
 									</div>
 								</ListContent>
-								<a href='/'><img src={item.get('imgUrl')} alt={item.get('name')}/></a>
+								<Link to='/detail'><img src={item.get('imgUrl')} alt={item.get('name')}/></Link>
 							</ListItem>
 						)
 					})

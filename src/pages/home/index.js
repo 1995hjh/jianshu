@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
 	Wrapper,
 	Content,
@@ -11,7 +11,7 @@ import Writer from './components/Writer';
 import Recommand from './components/Recommand';
 import { actions } from './store';
 
-class Home extends Component {
+class Home extends PureComponent {
 
 	componentDidMount() {
 		this.props.changeHomeData();

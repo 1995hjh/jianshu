@@ -4,6 +4,7 @@ import React, {
 } from 'react';
 import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
+import { Link } from 'react-router-dom';
 import {
 	HeaderWrapper,
 	Logo,
@@ -77,7 +78,9 @@ class Header extends Component {
 			<Fragment>
 				<HeaderWrapper>
 					<Wrapper>
-						<Logo/>
+						<Link to='/'>
+							<Logo/>
+						</Link>
 						<Nav>
 							<NavItem className='left active'><i className="icon iconfont">&#xe627;</i>首页</NavItem>
 							<NavItem className='left black'><i className="icon iconfont">&#xe64f;</i>下载App</NavItem>
