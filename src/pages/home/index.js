@@ -36,10 +36,6 @@ class Home extends Component {
 	}
 }
 
-const mapStateToProps = (state) => ({
-
-})
-
 const mapDispatchToProps = (dispatch) => {
 	return {
 		changeHomeData() {
@@ -48,4 +44,4 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(null, mapDispatchToProps)(Home);

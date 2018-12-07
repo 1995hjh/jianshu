@@ -11,6 +11,7 @@ export const Content = styled.div `
 	width: 70%;
 	margin:30px auto;
 	clear: both;
+	overflow: hidden;
 `
 
 export const ContentItem = styled.div `
