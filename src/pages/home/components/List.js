@@ -1,18 +1,21 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { ListItem, ListContent } from '../style';
+import { ListItem, ListContent, ReadMoreBtn } from '../style';
+import { actions } from '../store';
 
 class List extends Component {
 	render() {
 		const {
-			list
+			list,
+			getMoreList,
+			page
 		} = this.props;
 		return (
 			<Fragment>
 				{
-					list.map((item) => {
+					list.map((item, index) => {
 						return (
-							<ListItem key={item.get('id')}>
+							<ListItem key={index}>
 								<ListContent>
 									<a href='/' className='title'>{item.get('title')}</a>
 									<p className='content'>{item.get('content')}</p>
@@ -33,13 +36,24 @@ class List extends Component {
 						)
 					})
 				}
+				<ReadMoreBtn onClick={ () => {getMoreList(page)} }>阅读更多</ReadMoreBtn>
 			</Fragment>
 		)
 	}
 }
 
 const mapStateToProps = (state) => ({
-	list: state.getIn(['home', 'contentList'])
+	list: state.getIn(['home', 'contentList']),
+	page: state.getIn(['home', 'contentPage'])
 })
 
-export default connect(mapStateToProps, null)(List);
+const mapDispatchToProps = (dispatch) => {
+	return {
+		getMoreList(page) {
+			const action = actions.getMoreInfo(page);
+			dispatch(action);
+		}
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(List);

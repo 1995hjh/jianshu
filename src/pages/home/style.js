@@ -244,3 +244,21 @@ export const WriterItem = styled.div `
     	display: block;
 	}
 `
+
+export const ReadMoreBtn = styled.div`
+	width: 100%;
+    border-radius: 20px;
+    background-color: #a5a5a5;
+    height: 40px;
+    margin: 30px auto 60px;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    line-height: 20px;
+    &:hover {
+    	background: #858585;
+    }
+`
