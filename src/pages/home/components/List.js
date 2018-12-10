@@ -1,7 +1,7 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { ListItem, ListContent, ReadMoreBtn } from '../style';
+import { ListItem, ListContent, ReadMoreBtn, Footer }from '../style';
 import { actions } from '../store';
 
 class List extends PureComponent {
@@ -38,6 +38,37 @@ class List extends PureComponent {
 					})
 				}
 				<ReadMoreBtn onClick={ () => {getMoreList(page)} }>阅读更多</ReadMoreBtn>
+				<Footer>
+					<ul className='footerItemView'>
+						<a href='https://www.jianshu.com/c/jppzD2' target='_blank'><li>关于简书</li></a>
+						<em> · </em>
+						<a href='https://www.jianshu.com/contact' target='_blank'><li>联系我们</li></a>
+						<em> · </em>
+						<a href='https://www.jianshu.com/c/bfeec2e13990' target='_blank'><li>加入我们</li></a>
+						<em> · </em>
+						<a href='https://www.jianshu.com/p/fc1c113e5b6b' target='_blank'><li>简书出版</li></a>
+						<em> · </em>
+						<a href='https://www.jianshu.com/press/resources' target='_blank'><li>品牌与徽标</li></a>
+						<em> · </em>
+						<a href='https://www.jianshu.com/faqs' target='_blank'><li>帮助中心</li></a>
+						<em> · </em>
+						<a href='https://www.jianshu.com/p/cabc8fa39830' target='_blank'><li>合作伙伴</li></a>
+					</ul>
+					<div className="icp">
+					    &copy;2012-2018 上海佰集信息科技有限公司 / 简书 / 沪ICP备11018329号-5 /
+					    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402002252">
+					        <img src="//cdn2.jianshu.io/assets/web/smrz-557fa318122c99a66523209bf9753a27.png" alt="Smrz"/>
+						</a>
+						<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402002252">沪公网安备31010402002252号 / </a>
+					    <a target="_blank" href="http://www.shjbzx.cn/">
+					         <img src="//cdn2.jianshu.io/assets/web/wxb-a216456895eb66c17497dbd3da443cf8.png" alt="Wxb"/>
+						</a>
+						举报电话：021-34770013 /
+					    <a target="_blank" href="http://218.242.124.22:8081/businessCheck/verifKey.do?showType=extShow&amp;serial=9031000020171107081457000002158769-SAIC_SHOW_310000-20171115131223587837&amp;signData=MEQCIADWZ5aTcBeER5SOVp0ly+ElvKnwtjczum6Gi6wZ7/wWAiB9MAPM22hp947ZaBobux5PDkd0lfqoCOkVV7zjCYME6g==">
+					         <img src="//cdn2.jianshu.io/assets/web/zggsrz-5695587dccf490ca3e651f4228f7479e.png" alt="Zggsrz"/>
+						</a>
+					</div>
+				</Footer>
 			</Fragment>
 		)
 	}

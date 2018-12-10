@@ -251,7 +251,7 @@ export const ReadMoreBtn = styled.div`
     border-radius: 20px;
     background-color: #a5a5a5;
     height: 40px;
-    margin: 30px auto 60px;
+    margin: 30px auto 80px;
     padding: 10px 15px;
     text-align: center;
     font-size: 15px;
@@ -262,4 +262,38 @@ export const ReadMoreBtn = styled.div`
     &:hover {
     	background: #858585;
     }
+`
+export const Footer = styled.div `
+	width: 100%;
+	.footerItemView {
+		clear: both;
+		overflow: hidden;
+	}
+	.footerItemView a, .footerItemView em{
+		float: left;
+		color: #969696;
+		text-decoration: none;
+	    margin-right: 5px;
+	    font-size: 13px;
+	    display: inline-block;
+	}
+	.footerItemView a:hover{
+		color: #333;
+	}
+	.icp {
+		margin-top: 10px;
+		color: #c8c8c8;
+		font-size: 12px;
+	}
+	.icp a{
+		text-decoration: none;
+		color: #c8c8c8;
+		font-size: 12px;
+	}
+	.icp img {
+		height: 30px;
+		margin: 0 5px;
+		display: inline-block;
+		vertical-align: -webkit-baseline-middle;
+	}
 `
