@@ -14,7 +14,7 @@ import { actions } from './store';
 class Deatil extends Component {
 
 	componentDidMount() {
-		this.props.getDetail();
+		this.props.getDetail(this.props.match.params.id);
 	}
 
 	render() {
@@ -54,8 +54,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		getDetail() {
-			dispatch(actions.getDetailInfo());
+		getDetail(id) {
+			dispatch(actions.getDetailInfo(id));
 		}
 	}
 }

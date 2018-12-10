@@ -18,7 +18,7 @@ class List extends PureComponent {
 						return (
 							<ListItem key={index}>
 								<ListContent>
-									<Link to='/detail' className='title'>{item.get('title')}</Link>
+									<Link to={'/detail/' + item.get('id')} className='title'>{item.get('title')}</Link>
 									<p className='content'>{item.get('content')}</p>
 									<div>
 										<Link to="/detail">{item.get('name')}</Link>

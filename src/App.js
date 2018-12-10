@@ -60,7 +60,7 @@ class App extends Component {
                     <Fragment>
                       <Header/>
                       <Route path='/' exact component={Home}></Route>
-                      <Route path='/detail' exact component={Detail}></Route>
+                      <Route path='/detail/:id' exact component={Detail}></Route>
                     </Fragment>
                 </BrowserRouter>
                 {this.state.backTopDisplay && <BackTop onClick={this.handleBackTop}><i className="icon iconfont">&#xe81b;</i></BackTop>}

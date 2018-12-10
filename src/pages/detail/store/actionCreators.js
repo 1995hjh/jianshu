@@ -6,9 +6,9 @@ const getDetail = (data) => ({
 	data
 })
 
-export const getDetailInfo = () => {
+export const getDetailInfo = (id) => {
 	return (dispatch) => {
-		axios.get('api/detail.json').then((res) => {
+		axios.get('/api/detail.json?id=' + id).then((res) => {
 			dispatch(getDetail(res.data.data));
 		}).catch(() => {
 			console.warn('detail request error');
