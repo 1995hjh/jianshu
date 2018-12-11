@@ -1,5 +1,5 @@
 import React, {
-	Component
+	PureComponent
 } from 'react';
 import { connect } from 'react-redux';
 import {
@@ -11,7 +11,7 @@ import {
 } from './style';
 import { actions } from './store';
 
-class Deatil extends Component {
+class Deatil extends PureComponent {
 
 	componentDidMount() {
 		this.props.getDetail(this.props.match.params.id);
