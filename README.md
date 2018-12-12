@@ -51,3 +51,8 @@
 ## dangerouslySetInnerHTML
 	dangerouslySetInnerHTMl 是React标签的一个属性
 	angerouslySetInnerHTML={{ __html: '' }} 标签渲染字符串为html
+
+## 异步组件
+	react-loadable
+	详情见detail/loadable.js，首页加载只加载首页的js，点击详情页在加载详情页的js,使用该组件不会在首页一次性加载出所有页面的js,优化代码
+	主要该组件结合withRouter的使用

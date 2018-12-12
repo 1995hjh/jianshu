@@ -2,6 +2,7 @@ import React, {
 	PureComponent
 } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import {
 	DetailWrapper,
 	Content,
@@ -60,4 +61,4 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Deatil);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Deatil));

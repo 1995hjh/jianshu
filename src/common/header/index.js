@@ -108,7 +108,7 @@ class Header extends Component {
 						</Nav>
 						<NavBtnView>
 							<Link to='/login' onClick={ handleRegister }><NavBtn className='signUp'>注册</NavBtn></Link>
-							{loginIn ? <a href="https://www.jianshu.com/writer#/notebooks/32296951/notes/38189411" target="_blank"><NavBtn className='signIn'><i className="icon iconfont">&#xe613;</i>写文章</NavBtn></a> :
+							{loginIn ? <a rel='nofollow me noopener noreferrer' href="https://www.jianshu.com/writer#/notebooks/32296951/notes/38189411" target="_blank"><NavBtn className='signIn'><i className="icon iconfont">&#xe613;</i>写文章</NavBtn></a> :
 							<Link to='/login'><NavBtn className='signIn'><i className="icon iconfont">&#xe613;</i>写文章</NavBtn></Link>}
 						</NavBtnView>
 					</Wrapper>
