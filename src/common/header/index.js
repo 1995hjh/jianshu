@@ -19,6 +19,7 @@ import {
 	SearchInfoItem
 } from './style';
 import { actions } from './store';
+import { actions as actionsLogin } from '../../pages/login/store';
 
 class Header extends Component {
 
@@ -71,9 +72,10 @@ class Header extends Component {
 			focused,
 			handleInputFocus,
 			handleInputBlur,
-			list
+			list,
+			loginIn,
+			handleLogout
 		} = this.props;
-
 		return (
 			<Fragment>
 				<HeaderWrapper>
@@ -84,7 +86,7 @@ class Header extends Component {
 						<Nav>
 							<NavItem className='left active'><i className="icon iconfont">&#xe627;</i>首页</NavItem>
 							<NavItem className='left black'><i className="icon iconfont">&#xe64f;</i>下载App</NavItem>
-							<NavItem className='right login'>登录</NavItem>
+							{loginIn ? <NavItem className='right login' onClick={ handleLogout }>退出</NavItem> : <Link to='/login'><NavItem className='right login'>登录</NavItem></Link>}
 							<NavItem className='right aaView'><i className="icon iconfont iconAa">&#xe636;</i></NavItem>
 							<CSSTransition
 								in={focused}
@@ -119,7 +121,8 @@ const matStateToProps = (state) => {
 		focused: state.getIn(['header', 'focused']),
 		mouseIn: state.getIn(['header', 'mouseIn']),
 		list: state.getIn(['header', 'list']),
-		page: state.getIn(['header', 'page'])
+		page: state.getIn(['header', 'page']),
+		loginIn: state.getIn(['login', 'loginIn'])
 	}
 }
 
@@ -149,6 +152,10 @@ const mapDispatchToProps = (dispatch) => {
 			}
 			spin.style.transform = 'rotate('+ (original + 360) +'deg)';
 			dispatch(actions.changePage());
+		},
+		handleLogout () {
+			console.warn(0);
+			dispatch(actionsLogin.logout());
 		}
 	}
 }

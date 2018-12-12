@@ -34,7 +34,7 @@ export const Nav = styled.div `
 	.iconSearch {
 		position: absolute;
 	    top: 14px;
-	    left: 56%;
+	    left: 52%;
 	    font-size: 20px;
 	    width: 30px;
 	    height: 30px;
@@ -46,7 +46,7 @@ export const Nav = styled.div `
 	.focused {
 		background: #777;
 		color: #fff;
-		left: 63%;
+		left: 59%;
     }
     .ifocused-enter {
 		transition: all .5s ease-out;
@@ -83,6 +83,10 @@ export const NavItem = styled.div `
 	}
 	&.black {
 		color: #333;
+		margin-left: -5%;
+	    text-align: center;
+	    margin-right: 5%;
+	    width: 12%;
 	}
 	&.black:hover {
 		background: #eee;
@@ -122,7 +126,7 @@ export const NavSearch = styled.input.attrs({
 `
 export const SearchInfo = styled.div `
 	position: absolute;
-    left: 32%;
+    left: 28%;
     top: 58px;
     width: 25%;
     padding: 20px 20px 10px;
