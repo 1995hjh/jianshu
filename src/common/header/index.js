@@ -107,7 +107,8 @@ class Header extends Component {
 						</Nav>
 						<NavBtnView>
 							<NavBtn className='signUp'>注册</NavBtn>
-							<NavBtn className='signIn'> <i className="icon iconfont">&#xe613;</i>写文章</NavBtn>
+							{loginIn ? <a href="https://www.jianshu.com/writer#/notebooks/32296951/notes/38189411" target="_blank"><NavBtn className='signIn'><i className="icon iconfont">&#xe613;</i>写文章</NavBtn></a> :
+							<Link to='/login'><NavBtn className='signIn'><i className="icon iconfont">&#xe613;</i>写文章</NavBtn></Link>}
 						</NavBtnView>
 					</Wrapper>
 				</HeaderWrapper>
@@ -154,7 +155,6 @@ const mapDispatchToProps = (dispatch) => {
 			dispatch(actions.changePage());
 		},
 		handleLogout () {
-			console.warn(0);
 			dispatch(actionsLogin.logout());
 		}
 	}
