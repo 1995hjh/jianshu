@@ -74,7 +74,8 @@ class Header extends Component {
 			handleInputBlur,
 			list,
 			loginIn,
-			handleLogout
+			handleLogout,
+			handleRegister
 		} = this.props;
 		return (
 			<Fragment>
@@ -106,7 +107,7 @@ class Header extends Component {
 							{this.getListArea()}
 						</Nav>
 						<NavBtnView>
-							<NavBtn className='signUp'>注册</NavBtn>
+							<Link to='/login' onClick={ handleRegister }><NavBtn className='signUp'>注册</NavBtn></Link>
 							{loginIn ? <a href="https://www.jianshu.com/writer#/notebooks/32296951/notes/38189411" target="_blank"><NavBtn className='signIn'><i className="icon iconfont">&#xe613;</i>写文章</NavBtn></a> :
 							<Link to='/login'><NavBtn className='signIn'><i className="icon iconfont">&#xe613;</i>写文章</NavBtn></Link>}
 						</NavBtnView>
@@ -156,6 +157,9 @@ const mapDispatchToProps = (dispatch) => {
 		},
 		handleLogout () {
 			dispatch(actionsLogin.logout());
+		},
+		handleRegister () {
+			dispatch(actionsLogin.register());
 		}
 	}
 }

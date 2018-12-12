@@ -21,6 +21,11 @@ export const logout = () => ({
 	value: false
 })
 
+export const register = () => ({
+	type: actionTypes.CHANGE_REGISTER,
+	value: false
+})
+
 export const handleSubmit = (account, pwd) => {
 	return (dispatch) => {
 		axios.get('/api/login.json?account=' + account + '&pwd=' + pwd).then((res) => {

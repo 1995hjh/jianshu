@@ -17,6 +17,8 @@ export default (state = defaultState, action) => {
 			return state.set('loginIn', action.value);
 		case actionTypes.LOGOUT:
 			return state.set('loginIn', action.value);
+		case actionTypes.CHANGE_REGISTER:
+			return state.set('login', action.value);
 		default:
 			return state;
 	}
